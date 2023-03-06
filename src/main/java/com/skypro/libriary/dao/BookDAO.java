@@ -26,7 +26,7 @@ public class BookDAO {
                 book.getBookTitle(), book.getBookAuthor(), book.getBookYear(), book.getIsbn());
     }
     public void updateBook(Book book) {
-        jdbcTemplate.update("UPDATE books SET title = ?, author = ?, year = ? WHERE isbn = ?",
+        jdbcTemplate.update("UPDATE books SET book_title = ?, book_author = ?, book_year = ? WHERE isbn = ?",
                 book.getBookTitle(), book.getBookAuthor(), book.getBookYear(), book.getIsbn());
     }
     public void deleteBook(String isbn) {
